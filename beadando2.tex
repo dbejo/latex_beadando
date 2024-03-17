@@ -1,0 +1,42 @@
+\documentclass{article}
+\usepackage[magyar]{babel}
+\usepackage{t1enc}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage[export]{adjustbox}
+\graphicspath{ {./images/} }
+
+\begin{document}
+
+\section{§. Vezetők elektrosztatikus terének energiája}
+Számoljuk ki töltött vezetök elektrosztatikus terének teljes $\mathcal{U}$ energiáját$^1$ :
+\begin{equation}
+\mathcal{U} = \frac{1}{8\pi} \int E^2 \, dV,
+\end{equation}
+ahol az integrált a vezetőkön kívüli térre vesszük. Transzformáljuk ezt az integrált a következőképpen:
+\begin{equation}
+\mathcal{U} = -\frac{1}{8\pi} \int E \, grad \, \phi \, dV = -\frac{1}{8\pi} \int div (\phi E) dV + \frac{1}{8\pi} \int \phi div E dV
+\end{equation}
+A második integrál eltűnik az (2) egyenlet következtében, az első pedig olyan integrállá transzformálható, amelyet az elektromos tér által határolt vezetők fellületén, valamint egy végtelen távoli felületen kell venni. Ez utóbbi integrál azonban eltűnik a végtelenben az elektromos tér eléggé gyors csökkenése következtében ($\phi$-ben a tetszőleges állandót úgy választottuk, hogy a végtelenben $\phi$ = O teljesüljön. A vezetőket a indexszel, a felületükön az állandó potenciált $\phi_a$-val jelölve kapjuk$^2$, hogy
+\begin{equation}
+\mathcal{U} = \frac{1}{8\pi} \sum\limits_{a} \oint \phi E_n df = \frac{1}{8\pi} \sum\limits_{a} \phi_a \oint E_n df.
+\end{equation}
+Végül az (1,10) összefüggésnek megfelelően bevezetve az a-adik vezetö $e_a$ össztöltését, a teljes energiára a következő kifejezést kapjuk:
+\begin{equation}
+\mathcal{U} = \frac{1}{2} \sum\limits_{a} e_a \phi_a ,
+\end{equation}
+amely analóg a ponttöltésekből álló rendszer energiájára vonatkozó kifejezéssel.
+
+A vezetők potenciáljait és töltéseit nem lehet egyidejűleg tetszőlegesen megszabni, mert közöttük bizonyos összefüggések vannak. Mivel vákuumban a téregyenletek lineárisak és homogének, ezeknek az összefüggéseknek is lineárisaknak kell lenniük, vagyis a következő típusú egyenletekkel adhatók meg:
+\begin{equation}
+e_a = \sum\limits_{b} C_{ab\phi b} ,
+\end{equation}
+ahol a $C_{aa}$ és a $C_{ab}$ mennyiségeknek hosszúságdimenziójuk van és a vezetők relatív helyzetétől és alakjátólfüggenek. $AC_{aa}$ mennyiségeket önkapacitásoknak, a $C_{ab}(a \neq b)$ mennyiségeket elektrosztatikus indukciós együtthatóknak nevezzük. Abban a
+speciális esetben, amikor csak egy vezetőnk van, $e = C\phi$ , ahol C a kapacitás. A kapacitás nagyságrendje a test lineáris méreteivel esik egybe. Az inverz összefüggések, amelyek a töltések alapián a potenciálokat adják meg:
+\begin{equation}
+\phi_a = \sum\limits_{b} C_{ab}^{-1} e_b ,
+\end{equation}
+ahol $C_{ab}^{-1}$ együtthatók mátrixa a $C_{ab}$ mátrix inverze.
+
+
+\end{document}
