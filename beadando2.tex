@@ -42,5 +42,12 @@ Számítsuk ki vezetőrendszerek energiaváltozását, töltésük vagy potenci�
 \begin{equation} \label{eq:7}
 \delta \mathcal{U} = \frac{1}{4 \pi} \int E \delta EdV .
 \end{equation}
-
+Ezt a kifejezést két, ekvivalens módon transzformálhatjuk tovább. Ha ide az $E = -grad\phi$ kifejezést helyettesítjük és felhasználjuk azt a tényt, hogy a variált tér az eredeti térhez hasonlóan - kielégiti az (1,4) egyenletet (úgyhogy $div \delta E = 0$), akkor
+\begin{equation} \label{eq:8}
+\delta \mathcal{U} = \frac{1}{4 \pi} \int grad \phi * \delta EdV = \frac{1}{4\pi} \int div(\phi \delta E)dV = \frac{1}{4\pi} \sum\limits_a \phi_a \oint \delta E_n df,
+\end{equation}
+vagy végleges alakban
+\begin{equation} \label{eq:9}
+\delta \mathcal{U} = \sum\limits_a \phi_a \delta e_a ,
+\end{equation}
 \end{document}
