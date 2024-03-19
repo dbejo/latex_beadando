@@ -50,4 +50,46 @@ vagy végleges alakban
 \begin{equation} \label{eq:9}
 \delta \mathcal{U} = \sum\limits_a \phi_a \delta e_a ,
 \end{equation}
+azaz az energiaváltozást a töltésváltozásokkal kifejezve kaptuk meg. Ez az eredmény egyébként nyilvánvaló. Ez az amunka, amelyet $\delta e_a$ végtelen kis töltéseken kell végezni ahhoz, hogy azokat a végtelenből (ahol a potenciál nulla) a megadott vezetőkre vigyük.
+
+Más részről írhatjuk, hogy
+\begin{equation} \label{eq:10}
+\delta \mathcal{U} = -\frac{1}{4 \pi} \int Egrad \delta \phi dV=-\frac{1}{4 \pi} \int div(E \delta \phi)dV= \frac{1}{4 \pi} \sum\limits_a \delta \phi_a \oint E_n df,
+\end{equation}
+vagy
+\begin{equation} \label{eq:11}
+\delta \mathcal{U} = \sum\limits_a e_a \delta \phi_a ,
+\end{equation}
+azaz, itt a vezetők potenciálváltozásaival fejeztük ki az energiaváltozást.
+
+A (\ref{eq:9}) és (\ref{eq:10}) formulák azt mutatják, hogy az $\mathcal{U}$ energia töltés szerinti deriváltjai a vezetők potenciáljait, az $\mathcal{U}$ energia potenciálok szerinti deriváltjai pedig a töltéseket adják meg:
+\begin{equation} \label{eq:12}
+\frac{\partial \mathcal{U}}{\partial e_a} = \phi_a , \frac{\partial \mathcal{U}}{\partial \phi_a} = e_a .
+\end{equation}
+Mivel ugyanakkor a potenciálok és a töltések egymás lineáris függényei, a (\ref{eq:5}) összefüggés segítségével kapjuk, hogy
+\begin{equation} \label{eq:13}
+\frac{\partial^2 \mathcal{U}}{\partial \phi_a \partial \phi_b} = \frac{\partial e_b}{\partial \phi_a} = C_{ba}.
+\end{equation}
+Ha megváltoztatjuk a differenciálás sorrendjét, akkor az eredmény $C_{ab}$ lenne, amiből látható, hogy
+\begin{equation} \label{eq:14}
+C_{ab} = C_{ba},
+\end{equation}
+s hasonlóan $C^{-1}_{ab}=C^{-1}_{ba}$. Az $\mathcal{U}$ energiát vagy a potenciálok, vagy a töltések kvadratikus alakjaként irhatjuk fel:
+\begin{equation} \label{eq:15}
+\mathcal{U} = \frac{1}{2} \sum\limits_{a, b} C_{ab \phi a \phi b} = \frac{1}{2} \sum\limits_{a, b} C^{-1}_{ab} e_a e_b .
+\end{equation}
+
+Ennek a kvadratikusalaknak, mint a kiinduló (\ref{eq:1}) kifejezésnek is, pozitiv definitnek kell lennie. Ebből a feltételből különböző egyenlőtlenségeket származtathatunk, amelyeket a $C_{ab}$ együtthatóknak ki kell elégiteniük. Többek között az összes önkapacitás pozitív:
+\begin{equation} \label{eq:16}
+C_{aa} > 0
+\end{equation}
+(és $C^{-1}_{aa} > 0$).
+
+Másrészt az összes elektrosztatikus indukciós együttható negatív:
+
+\begin{equation} \label{eq:17}
+C_{ab} < 0 \hspace{1 cm} (a \neq b )
+\end{equation}
+A (\ref{eq:17}) egyenlőtlenség nyilvánvaló, már az itt következő egyszerű meggondolásokból is. Tegyük fel, hogy az a vezeto kivételével minden vezetöt leföldeltünk, azaz po- tencialjuk nulla lesz. Ekkor az a-adik töltött vezetö által valamelyik b vezetön indu-
+kált töltés ez = Cbala. Nyilvanvalo, hogy az indukált töltés elöjele ellenkezö lesz az indukáló potenciál elójelével és ezért Cab < O. Erröl meggyözödhetünk, ha abból in- dulunk ki, hogy az elektrosztatikus tér potenciálja a vezetökön kívül nem vehet fel maximális vagy minimális értéket. Például legyen az egyetlen nem földelt vezeto a potenciálja pozitiv. Ekkor a potenciál az egész térben pozitiv, a legkisebb (nulla)ér- téket csak földelt vezetökön éri el. Ebböl következik, hogy ezen vezetök felületén a potencial d/On normális irányú deriváltja pozitiv, és töltéseik az (1,10) összefüggés- nek megfelelöen negativak. Analóg meggondolások segitségével gyözödhetünk meg arról, hogy C=1 = 0.
 \end{document}
