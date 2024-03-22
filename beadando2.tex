@@ -90,6 +90,18 @@ Másrészt az összes elektrosztatikus indukciós együttható negatív:
 \begin{equation} \label{eq:17}
 C_{ab} < 0 \hspace{1 cm} (a \neq b )
 \end{equation}
-A (\ref{eq:17}) egyenlőtlenség nyilvánvaló, már az itt következő egyszerű meggondolásokból is. Tegyük fel, hogy az a vezeto kivételével minden vezetöt leföldeltünk, azaz po- tencialjuk nulla lesz. Ekkor az a-adik töltött vezetö által valamelyik b vezetön indu-
-kált töltés ez = Cbala. Nyilvanvalo, hogy az indukált töltés elöjele ellenkezö lesz az indukáló potenciál elójelével és ezért Cab < O. Erröl meggyözödhetünk, ha abból in- dulunk ki, hogy az elektrosztatikus tér potenciálja a vezetökön kívül nem vehet fel maximális vagy minimális értéket. Például legyen az egyetlen nem földelt vezeto a potenciálja pozitiv. Ekkor a potenciál az egész térben pozitiv, a legkisebb (nulla)ér- téket csak földelt vezetökön éri el. Ebböl következik, hogy ezen vezetök felületén a potencial d/On normális irányú deriváltja pozitiv, és töltéseik az (1,10) összefüggés- nek megfelelöen negativak. Analóg meggondolások segitségével gyözödhetünk meg arról, hogy C=1 = 0.
+A (\ref{eq:17}) egyenlőtlenség nyilvánvaló, már az itt következő egyszerű meggondolásokból is. Tegyük fel, hogy az $a$ vezető kivételével minden vezetőt leföldeltünk, azaz potenciáljuk nulla lesz. Ekkor az $a$-adik töltött vezető által valamelyik $b$ vezetőn indukált töltés $e_b = C_{ba}\phi_a$. Nyilvánvaló, hogy az indukált töltés előjele ellenkező lesz az indukáló potenciál előjelével és ezért $C_{ab} < O$. Erről meggyőződhetünk, ha abból indulunk ki, hogy az elektrosztatikus tér potenciálja a vezetőkön kívül nem vehet fel maximális vagy minimális értéket. Például legyen az egyetlen nem földelt vezető $\phi_a$ potenciálja pozitív. Ekkor a potenciál az egész térben pozitív, a legkisebb (nulla) értéket csak földelt vezetőkön éri el. Ebből következik, hogy ezen vezetők felületén a potenciál $\delta \phi / \delta n$ normális irányú deriváltja pozitív, és töltéseik az (1,10) összefüggésnek megfelelően negatívak. Analóg meggondolások segítségével győzödhetünk meg arról, hogy $C_{ab}^{-1} > 0$.
+
+Vezetők elektrosztatikus tere energiájának szélsőértéke van. Igaz, ez a tulajdonság nem annyira fizikai, mint inkább formális jellegű. Ennek levezetéséhez feltesszük, hogy a vezetőkön a töltéseloszlást infinitezimálisan megváltoztatjuk úgy, hogy minden egyes vezetőn az össztöltés változatlan marad, és végeredmenyképpen a töltések a vezető belsejébe is kerülhetnek. Itt elhanyagoljuk azt a tényt, hogy egy ilyen töltéseloszlás a valóságban nem leet stacionárius. Vizsgáljuk az
+\begin{equation} \label{eq:18}
+    \mathcal{U} = \frac{1}{8 \pi} \int E^2dV
+\end{equation}
+integrál megfelelő változását, amely integrált most az egész térre kell kiterjeszteni, beleértve maguknak a vezetőknek a térfogatait is (mivel a töltések elmozditása után az $\mathcal{E}$ térerősség a vezető belsejében is általában különbözhet nullától). A variáció:
+\begin{equation} \label{eq:19}
+    \delta \mathcal{U} = \frac{1}{4 \pi} \int grad \phi \cdot \delta EdV = \frac{1}{4\pi} \int div(\phi \delta E)dV + \frac{1}{4\pi} \int \phi div \delta EdV
+\end{equation}
+Az első integrál, mivel áttranszformálható egy végtelen távoli felületre vett integrállá, eltűnik. A másodikban az (1,8) egyenlet következtében $div \delta \mathcal{E} = 4 \pi \delta \overline\rho$, ezért
+\begin{equation} \label{eq:20}
+    \delta \mathcal{U} = \int \phi \delta \overline{\rho}dV.
+\end{equation}
 \end{document}
