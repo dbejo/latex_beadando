@@ -4,6 +4,7 @@
 \usepackage{graphicx}
 \usepackage{amsmath}
 \usepackage[export]{adjustbox}
+\DeclareMathAlphabet\mathbfcal{OMS}{cmsy}{b}{n}
 \graphicspath{ {./images/} }
 
 \begin{document}
@@ -11,84 +12,84 @@
 \section{§. Vezetők elektrosztatikus terének energiája}
 Számoljuk ki töltött vezetők elektrosztatikus terének teljes $\mathcal{U}$ energiáját$^1$ :
 \begin{equation} \label{eq:1}
-\mathcal{U} = \frac{1}{8\pi} \int E^2 \, dV,
+    \mathcal{U} = \frac{1}{8\pi} \int E^2 \, dV,
 \end{equation}
 ahol az integrált a vezetőkön kívüli térre vesszük. Transzformáljuk ezt az integrált a következőképpen:
 \begin{equation} \label{eq:2}
-\mathcal{U} = -\frac{1}{8\pi} \int E \, grad \, \phi \, dV = -\frac{1}{8\pi} \int div (\phi E) dV + \frac{1}{8\pi} \int \phi div E dV
+    \mathcal{U} = -\frac{1}{8\pi} \int E \, grad \, \phi \, dV = -\frac{1}{8\pi} \int div (\phi E) dV + \frac{1}{8\pi} \int \phi div E dV
 \end{equation}
 A második integrál eltűnik az (\ref{eq:2}) egyenlet következtében, az első pedig olyan integrállá transzformálható, amelyet az elektromos tér által határolt vezetők fellületén, valamint egy végtelen távoli felületen kell venni. Ez utóbbi integrál azonban eltűnik a végtelenben az elektromos tér eléggé gyors csökkenése következtében ($\phi$-ben a tetszőleges állandót úgy választottuk, hogy a végtelenben $\phi$ = O teljesüljön. A vezetőket a indexszel, a felületükön az állandó potenciált $\phi_a$-val jelölve kapjuk$^2$, hogy
 \begin{equation} \label{eq:3}
-\mathcal{U} = \frac{1}{8\pi} \sum\limits_{a} \oint \phi E_n df = \frac{1}{8\pi} \sum\limits_{a} \phi_a \oint E_n df.
+    \mathcal{U} = \frac{1}{8\pi} \sum\limits_{a} \oint \phi E_n df = \frac{1}{8\pi} \sum\limits_{a} \phi_a \oint E_n df.
 \end{equation}
 Végül az (1,10) összefüggésnek megfelelően bevezetve az a-adik vezetö $e_a$ össztöltését, a teljes energiára a következő kifejezést kapjuk:
 \begin{equation} \label{eq:4}
-\mathcal{U} = \frac{1}{2} \sum\limits_{a} e_a \phi_a ,
+    \mathcal{U} = \frac{1}{2} \sum\limits_{a} e_a \phi_a ,
 \end{equation}
 amely analóg a ponttöltésekből álló rendszer energiájára vonatkozó kifejezéssel.
 
 A vezetők potenciáljait és töltéseit nem lehet egyidejűleg tetszőlegesen megszabni, mert közöttük bizonyos összefüggések vannak. Mivel vákuumban a téregyenletek lineárisak és homogének, ezeknek az összefüggéseknek is lineárisaknak kell lenniük, vagyis a következő típusú egyenletekkel adhatók meg:
 \begin{equation} \label{eq:5}
-e_a = \sum\limits_{b} C_{ab\phi b} ,
+    e_a = \sum\limits_{b} C_{ab\phi b} ,
 \end{equation}
 ahol a $C_{aa}$ és a $C_{ab}$ mennyiségeknek hosszúságdimenziójuk van és a vezetők relatív helyzetétől és alakjátólfüggenek. $AC_{aa}$ mennyiségeket önkapacitásoknak, a $C_{ab}(a \neq b)$ mennyiségeket elektrosztatikus indukciós együtthatóknak nevezzük. Abban a
 speciális esetben, amikor csak egy vezetőnk van, $e = C\phi$ , ahol C a kapacitás. A kapacitás nagyságrendje a test lineáris méreteivel esik egybe. Az inverz összefüggések, amelyek a töltések alapián a potenciálokat adják meg:
 \begin{equation} \label{eq:6}
-\phi_a = \sum\limits_{b} C_{ab}^{-1} e_b ,
+    \phi_a = \sum\limits_{b} C_{ab}^{-1} e_b ,
 \end{equation}
 ahol $C_{ab}^{-1}$ együtthatók mátrixa a $C_{ab}$ mátrix inverze.
 
 Számítsuk ki vezetőrendszerek energiaváltozását, töltésük vagy potenciáljuk végtelen kis megváltozása esetén. Variálva a kiinduló (\ref{eq:1}) kifejezést, kapjuk, hogy
 \begin{equation} \label{eq:7}
-\delta \mathcal{U} = \frac{1}{4 \pi} \int E \delta EdV .
+    \delta \mathcal{U} = \frac{1}{4 \pi} \int E \delta EdV .
 \end{equation}
 Ezt a kifejezést két, ekvivalens módon transzformálhatjuk tovább. Ha ide az $E = -grad\phi$ kifejezést helyettesítjük és felhasználjuk azt a tényt, hogy a variált tér az eredeti térhez hasonlóan - kielégiti az (1,4) egyenletet (úgyhogy $div \delta E = 0$), akkor
 \begin{equation} \label{eq:8}
-\delta \mathcal{U} = \frac{1}{4 \pi} \int grad \phi * \delta EdV = \frac{1}{4\pi} \int div(\phi \delta E)dV = \frac{1}{4\pi} \sum\limits_a \phi_a \oint \delta E_n df,
+    \delta \mathcal{U} = \frac{1}{4 \pi} \int grad \phi * \delta EdV = \frac{1}{4\pi} \int div(\phi \delta E)dV = \frac{1}{4\pi} \sum\limits_a \phi_a \oint \delta E_n df,
 \end{equation}
 vagy végleges alakban
 \begin{equation} \label{eq:9}
-\delta \mathcal{U} = \sum\limits_a \phi_a \delta e_a ,
+    \delta \mathcal{U} = \sum\limits_a \phi_a \delta e_a ,
 \end{equation}
 azaz az energiaváltozást a töltésváltozásokkal kifejezve kaptuk meg. Ez az eredmény egyébként nyilvánvaló. Ez az amunka, amelyet $\delta e_a$ végtelen kis töltéseken kell végezni ahhoz, hogy azokat a végtelenből (ahol a potenciál nulla) a megadott vezetőkre vigyük.
 
 Más részről írhatjuk, hogy
 \begin{equation} \label{eq:10}
-\delta \mathcal{U} = -\frac{1}{4 \pi} \int Egrad \delta \phi dV=-\frac{1}{4 \pi} \int div(E \delta \phi)dV= \frac{1}{4 \pi} \sum\limits_a \delta \phi_a \oint E_n df,
+    \delta \mathcal{U} = -\frac{1}{4 \pi} \int Egrad \delta \phi dV=-\frac{1}{4 \pi} \int div(E \delta \phi)dV= \frac{1}{4 \pi} \sum\limits_a \delta \phi_a \oint E_n df,
 \end{equation}
 vagy
 \begin{equation} \label{eq:11}
-\delta \mathcal{U} = \sum\limits_a e_a \delta \phi_a ,
+    \delta \mathcal{U} = \sum\limits_a e_a \delta \phi_a ,
 \end{equation}
 azaz, itt a vezetők potenciálváltozásaival fejeztük ki az energiaváltozást.
 
 A (\ref{eq:9}) és (\ref{eq:10}) formulák azt mutatják, hogy az $\mathcal{U}$ energia töltés szerinti deriváltjai a vezetők potenciáljait, az $\mathcal{U}$ energia potenciálok szerinti deriváltjai pedig a töltéseket adják meg:
 \begin{equation} \label{eq:12}
-\frac{\partial \mathcal{U}}{\partial e_a} = \phi_a , \frac{\partial \mathcal{U}}{\partial \phi_a} = e_a .
+    \frac{\partial \mathcal{U}}{\partial e_a} = \phi_a , \frac{\partial \mathcal{U}}{\partial \phi_a} = e_a .
 \end{equation}
 Mivel ugyanakkor a potenciálok és a töltések egymás lineáris függényei, a (\ref{eq:5}) összefüggés segítségével kapjuk, hogy
 \begin{equation} \label{eq:13}
-\frac{\partial^2 \mathcal{U}}{\partial \phi_a \partial \phi_b} = \frac{\partial e_b}{\partial \phi_a} = C_{ba}.
+    \frac{\partial^2 \mathcal{U}}{\partial \phi_a \partial \phi_b} = \frac{\partial e_b}{\partial \phi_a} = C_{ba}.
 \end{equation}
 Ha megváltoztatjuk a differenciálás sorrendjét, akkor az eredmény $C_{ab}$ lenne, amiből látható, hogy
 \begin{equation} \label{eq:14}
-C_{ab} = C_{ba},
+    C_{ab} = C_{ba},
 \end{equation}
 s hasonlóan $C^{-1}_{ab}=C^{-1}_{ba}$. Az $\mathcal{U}$ energiát vagy a potenciálok, vagy a töltések kvadratikus alakjaként irhatjuk fel:
 \begin{equation} \label{eq:15}
-\mathcal{U} = \frac{1}{2} \sum\limits_{a, b} C_{ab \phi a \phi b} = \frac{1}{2} \sum\limits_{a, b} C^{-1}_{ab} e_a e_b .
+    \mathcal{U} = \frac{1}{2} \sum\limits_{a, b} C_{ab \phi a \phi b} = \frac{1}{2} \sum\limits_{a, b} C^{-1}_{ab} e_a e_b .
 \end{equation}
 
 Ennek a kvadratikusalaknak, mint a kiinduló (\ref{eq:1}) kifejezésnek is, pozitiv definitnek kell lennie. Ebből a feltételből különböző egyenlőtlenségeket származtathatunk, amelyeket a $C_{ab}$ együtthatóknak ki kell elégiteniük. Többek között az összes önkapacitás pozitív:
 \begin{equation} \label{eq:16}
-C_{aa} > 0
+    C_{aa} > 0
 \end{equation}
 (és $C^{-1}_{aa} > 0$).
 
 Másrészt az összes elektrosztatikus indukciós együttható negatív:
 
 \begin{equation} \label{eq:17}
-C_{ab} < 0 \hspace{1 cm} (a \neq b )
+    C_{ab} < 0 \hspace{1 cm} (a \neq b )
 \end{equation}
 A (\ref{eq:17}) egyenlőtlenség nyilvánvaló, már az itt következő egyszerű meggondolásokból is. Tegyük fel, hogy az $a$ vezető kivételével minden vezetőt leföldeltünk, azaz potenciáljuk nulla lesz. Ekkor az $a$-adik töltött vezető által valamelyik $b$ vezetőn indukált töltés $e_b = C_{ba}\phi_a$. Nyilvánvaló, hogy az indukált töltés előjele ellenkező lesz az indukáló potenciál előjelével és ezért $C_{ab} < O$. Erről meggyőződhetünk, ha abból indulunk ki, hogy az elektrosztatikus tér potenciálja a vezetőkön kívül nem vehet fel maximális vagy minimális értéket. Például legyen az egyetlen nem földelt vezető $\phi_a$ potenciálja pozitív. Ekkor a potenciál az egész térben pozitív, a legkisebb (nulla) értéket csak földelt vezetőkön éri el. Ebből következik, hogy ezen vezetők felületén a potenciál $\delta \phi / \delta n$ normális irányú deriváltja pozitív, és töltéseik az (1,10) összefüggésnek megfelelően negatívak. Analóg meggondolások segítségével győzödhetünk meg arról, hogy $C_{ab}^{-1} > 0$.
 
@@ -103,5 +104,27 @@ integrál megfelelő változását, amely integrált most az egész térre kell 
 Az első integrál, mivel áttranszformálható egy végtelen távoli felületre vett integrállá, eltűnik. A másodikban az (1,8) egyenlet következtében $div \delta \mathcal{E} = 4 \pi \delta \overline\rho$, ezért
 \begin{equation} \label{eq:20}
     \delta \mathcal{U} = \int \phi \delta \overline{\rho}dV.
+\end{equation}
+Ez az integrál azonban eltűnik, ha $\phi$ az elektromos tér valódi potenciálja: ebben az esetben minden egyes vezető belsejében $\phi$ = állandó, és a vezetők térfogata szerinti $\int \delta \overline{\rho} dV$ integrálok nullával egyenlőek, mivel a vezetők össztöltései változatlanok maradnak.
+
+Így a valódi elektrosztatikus tér energiája minimális, összehasonlítva azon terek lehetséges energiáival, amelyeket a vezetők térfogatában lévő bármely más töltéseloszlás hozhatna létre (Thomson tétele).
+
+Ebből a tételből többek között az következik, hogy egy semleges vezető adott töltések (töltött vezetők)terébe helyezése esetén a tér teljes energiája csökken. Ahhoz, hogy erről meggyőződjünk, elegendő összehasonlítani a semleges vezető behelyezése után kialakuló valódi térenergiát annak a fiktív térnek az energiájával, amely azt reprezentálja, hogy a behelyezett vezetőn indukált töltések nincsenek. A valódi energia, mivel ennek értéke minimális, kisebb, mint a fiktív energia, ez utóbbi viszont megegyezik az eredeti térenergiával mivel indukált töltések hiányában a tér változás nélkül, "behatolna" a vezető belsejébe. Ezt az eredmény másképp is megfogalmazhatjuk: ha adott töltésrendszertől távol semleges vezetőt helyezünk el, akkor a vezetőt a töltésrendszer vonzza.
+
+Végül meg lebet mutatni, hogy egy töltött vagy semleges vezető, amelyet elektrosztatikus térbe helyezünk, általában csak az elektrosztatikus erők hatása alatt nem lehet stabilis egyensúlyban. Ez az állítás általánosítja az előző paragrafus végén bizonyított, ponttöltésre vonatkozó analóg tételt, és úgy bizonyítható, hogy ha előző állításunkat kombináljuk a Thomson-tétellel. Ennek részletes levezetésével azonban itt nem foglalkozunk.
+
+A(\ref{eq:15}) formula alkalmazható akkor, ha egymástól véges távolságokra lévő vezetőrendszerek energiáját számoljuk. Speciális megfontolásokat követel azonban az \textbf{E} homogén külső térben lévő semleges vezető energiája. A külső teret ekkor úgy képzelhetjük el, hogy végtelenben lévő töltések hozták létre. A (\ref{eq:4}) egyenlet szerint ez
+az energia $\mathcal{U} = e \phi /2$, ahol $e$ teret létrehozó távoli töltés és $\phi$ a vezető által létrehozott potenciál az $e$ töltés helyén ($\mathcal{U}$ nem tartalmazza az $e$ töltés energiáját ezen töltés saját terében, mivel minket csak a vezető energiája érdekel). A vezetőn lévő töltés zérus, de a külső tér hatása miatt a vezető elektromos dipólmomentumra tesz szert, amelyet $\mathcal{D}$-vel jelölünk. Az elektromos dipólus terének potenciálja tőle nagy \textbf{r} távolságra, mint ismeretes, $\phi = \mathbfcal{D}\textbf{r}/r^3$, ezért
+\begin{equation} \label{eq:21}
+    \mathcal{U} = \frac{e}{2r^3} \mathcal{D}\textbf{r}.
+\end{equation}
+
+Mivel a téregyenletek lineárisak, nyilvánvaló, hogy a $\mathcal{D}$ dipólmomentum komponensei az X térerősség komponenseinek lineáris függvényei. A $\mathcal{D}$ és X közötti arányossági tényezőknek hosszúság a köbön dimenziója van, és ezért a vezető térfogatával arányosak:
+\begin{equation} \label{eq:22}
+    \mathcal{D}_i = V \alpha_{ik} X_k ,
+\end{equation}
+ahol az $\alpha_{ik}$ együtthatók csak a test alakjától függenek. A $V \alpha_{ik}$ mennyiségek egy tenzort alkotnak, amelyet a test polarizációs tenzorának neveznek. Ez a tenzor szimmetrikus: $\alpha_{ik} = \alpha_{ki}$ (az állitást a 11. §-ban fogjuk bizonyítani). Ennek megfelelően, a (\ref{eq:21})-ben szereplő energia a következő alakot ölti:
+\begin{equation} \label{eq:23}
+    \mathcal{U} = -\frac{1}{2} V \alpha_{ik} X_i X_k .
 \end{equation}
 \end{document}
