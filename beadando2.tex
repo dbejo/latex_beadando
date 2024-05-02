@@ -6,11 +6,16 @@
 \usepackage[export]{adjustbox}
 \DeclareMathAlphabet\mathbfcal{OMS}{cmsy}{b}{n}
 \graphicspath{ {./images/} }
+\setcounter{section}{1}
+\let\theequationWithoutPage\theequation
+\renewcommand\theequation{2,\theequationWithoutPage}
+\let\thefigureWithoutPage\thefigure
+\renewcommand\thefigure{2,\thefigureWithoutPage}
 
 \begin{document}
 
 \section{§. Vezetők elektrosztatikus terének energiája}
-Számoljuk ki töltött vezetők elektrosztatikus terének teljes $\mathcal{U}$ energiáját$^1$ :
+Számoljuk ki töltött vezetők elektrosztatikus terének teljes $\mathcal{U}$ energiáját\footnote[3]{E$^2$ nem egyezik meg az igazi tér $\overline{e^2}$ átlagával vezető felülete közelében és annak belsejében (ahol E = 0, de természetesen $\overline{e^2} \neq$ 0). A (\ref{eq:1}) integrál kiszamítása során a vezető belsőenergiáját, amely itt nem lényeges, és a töltéseknek a vezető felületére vonatkozó affinitási energiáját nem vesszük figyelembe.}
 \begin{equation} \label{eq:1}
     \mathcal{U} = \frac{1}{8\pi} \int E^2 \, dV,
 \end{equation}
@@ -18,7 +23,7 @@ ahol az integrált a vezetőkön kívüli térre vesszük. Transzformáljuk ezt 
 \begin{equation} \label{eq:2}
     \mathcal{U} = -\frac{1}{8\pi} \int E \, grad \, \phi \, dV = -\frac{1}{8\pi} \int div (\phi E) dV + \frac{1}{8\pi} \int \phi div E dV
 \end{equation}
-A második integrál eltűnik az (\ref{eq:2}) egyenlet következtében, az első pedig olyan integrállá transzformálható, amelyet az elektromos tér által határolt vezetők fellületén, valamint egy végtelen távoli felületen kell venni. Ez utóbbi integrál azonban eltűnik a végtelenben az elektromos tér eléggé gyors csökkenése következtében ($\phi$-ben a tetszőleges állandót úgy választottuk, hogy a végtelenben $\phi$ = O teljesüljön. A vezetőket a indexszel, a felületükön az állandó potenciált $\phi_a$-val jelölve kapjuk$^2$, hogy
+A második integrál eltűnik az (\ref{eq:2}) egyenlet következtében, az első pedig olyan integrállá transzformálható, amelyet az elektromos tér által határolt vezetők fellületén, valamint egy végtelen távoli felületen kell venni. Ez utóbbi integrál azonban eltűnik a végtelenben az elektromos tér eléggé gyors csökkenése következtében ($\phi$-ben a tetszőleges állandót úgy választottuk, hogy a végtelenben $\phi$ = O teljesüljön. A vezetőket a indexszel, a felületükön az állandó potenciált $\phi_a$-val jelölve kapjuk\footnote[4]{A térfogati integrál felületi integrállá történő transformálásakor itt és a következőkben is figyelembe kell venni, hogy $E_n$, a vezető kifelé irányuló normálisának irányába vett összetevő. Ez az irány ellentétes a térfogati integrál, azaz a vezetőkön kívüli geometriai tér tartományához képest kifelé mutató normális irányával. Ezzel függ össze az integrál előjelváltása transzformáció során.}, hogy
 \begin{equation} \label{eq:3}
     \mathcal{U} = \frac{1}{8\pi} \sum\limits_{a} \oint \phi E_n df = \frac{1}{8\pi} \sum\limits_{a} \phi_a \oint E_n df.
 \end{equation}
@@ -84,7 +89,8 @@ Ennek a kvadratikusalaknak, mint a kiinduló (\ref{eq:1}) kifejezésnek is, pozi
 \begin{equation} \label{eq:16}
     C_{aa} > 0
 \end{equation}
-(és $C^{-1}_{aa} > 0$).
+(és $C^{-1}_{aa} > 0$).\footnote[5]{Megemlítjük azt is, hogy a (\ref{eq:9}) alak pozitivitási feltételei között szerepelnek a $C_{aa}C_{bb} > C^2_{ab}$
+egyenlőtlenségek is.}
 
 Másrészt az összes elektrosztatikus indukciós együttható negatív:
 
@@ -107,11 +113,11 @@ Az első integrál, mivel áttranszformálható egy végtelen távoli felületre
 \end{equation}
 Ez az integrál azonban eltűnik, ha $\phi$ az elektromos tér valódi potenciálja: ebben az esetben minden egyes vezető belsejében $\phi$ = állandó, és a vezetők térfogata szerinti $\int \delta \overline{\rho} dV$ integrálok nullával egyenlőek, mivel a vezetők össztöltései változatlanok maradnak.
 
-Így a valódi elektrosztatikus tér energiája minimális, összehasonlítva azon terek lehetséges energiáival, amelyeket a vezetők térfogatában lévő bármely más töltéseloszlás hozhatna létre (Thomson tétele).
+Így a valódi elektrosztatikus tér energiája minimális\footnote[6]{Itt nem adjuk meg azokat az egyszerű érveket, amelyek arra utalnak, hogy nem általában szélsőértékről, hanem éppen minimumról van szó.}, összehasonlítva azon terek lehetséges energiáival, amelyeket a vezetők térfogatában lévő bármely más töltéseloszlás hozhatna létre (Thomson tétele).
 
 Ebből a tételből többek között az következik, hogy egy semleges vezető adott töltések (töltött vezetők)terébe helyezése esetén a tér teljes energiája csökken. Ahhoz, hogy erről meggyőződjünk, elegendő összehasonlítani a semleges vezető behelyezése után kialakuló valódi térenergiát annak a fiktív térnek az energiájával, amely azt reprezentálja, hogy a behelyezett vezetőn indukált töltések nincsenek. A valódi energia, mivel ennek értéke minimális, kisebb, mint a fiktív energia, ez utóbbi viszont megegyezik az eredeti térenergiával mivel indukált töltések hiányában a tér változás nélkül, "behatolna" a vezető belsejébe. Ezt az eredmény másképp is megfogalmazhatjuk: ha adott töltésrendszertől távol semleges vezetőt helyezünk el, akkor a vezetőt a töltésrendszer vonzza.
 
-Végül meg lebet mutatni, hogy egy töltött vagy semleges vezető, amelyet elektrosztatikus térbe helyezünk, általában csak az elektrosztatikus erők hatása alatt nem lehet stabilis egyensúlyban. Ez az állítás általánosítja az előző paragrafus végén bizonyított, ponttöltésre vonatkozó analóg tételt, és úgy bizonyítható, hogy ha előző állításunkat kombináljuk a Thomson-tétellel. Ennek részletes levezetésével azonban itt nem foglalkozunk.
+Végül meg lehet mutatni, hogy egy töltött vagy semleges vezető, amelyet elektrosztatikus térbe helyezünk, általában csak az elektrosztatikus erők hatása alatt nem lehet stabilis egyensúlyban. Ez az állítás általánosítja az előző paragrafus végén bizonyított, ponttöltésre vonatkozó analóg tételt, és úgy bizonyítható, hogy ha előző állításunkat kombináljuk a Thomson-tétellel. Ennek részletes levezetésével azonban itt nem foglalkozunk.
 
 A(\ref{eq:15}) formula alkalmazható akkor, ha egymástól véges távolságokra lévő vezetőrendszerek energiáját számoljuk. Speciális megfontolásokat követel azonban az \textbf{E} homogén külső térben lévő semleges vezető energiája. A külső teret ekkor úgy képzelhetjük el, hogy végtelenben lévő töltések hozták létre. A (\ref{eq:4}) egyenlet szerint ez
 az energia $\mathcal{U} = e \phi /2$, ahol $e$ teret létrehozó távoli töltés és $\phi$ a vezető által létrehozott potenciál az $e$ töltés helyén ($\mathcal{U}$ nem tartalmazza az $e$ töltés energiáját ezen töltés saját terében, mivel minket csak a vezető energiája érdekel). A vezetőn lévő töltés zérus, de a külső tér hatása miatt a vezető elektromos dipólmomentumra tesz szert, amelyet $\mathcal{D}$-vel jelölünk. Az elektromos dipólus terének potenciálja tőle nagy \textbf{r} távolságra, mint ismeretes, $\phi = \mathbfcal{D}\textbf{r}/r^3$, ezért
@@ -119,12 +125,17 @@ az energia $\mathcal{U} = e \phi /2$, ahol $e$ teret létrehozó távoli tölté
     \mathcal{U} = \frac{e}{2r^3} \mathcal{D}\textbf{r}.
 \end{equation}
 
-Mivel a téregyenletek lineárisak, nyilvánvaló, hogy a $\mathcal{D}$ dipólmomentum komponensei az X térerősség komponenseinek lineáris függvényei. A $\mathcal{D}$ és X közötti arányossági tényezőknek hosszúság a köbön dimenziója van, és ezért a vezető térfogatával arányosak:
+Azonban az $e\textbf{r}/r^3$ éppen ez $e$ töltés által létrehozott X külső térerősség. Így
 \begin{equation} \label{eq:22}
+    \mathcal{U} = -\frac{1}{2} \mathcal{D}X
+\end{equation}
+
+Mivel a téregyenletek lineárisak, nyilvánvaló, hogy a $\mathcal{D}$ dipólmomentum komponensei az X térerősség komponenseinek lineáris függvényei. A $\mathcal{D}$ és X közötti arányossági tényezőknek hosszúság a köbön dimenziója van, és ezért a vezető térfogatával arányosak:
+\begin{equation} \label{eq:23}
     \mathcal{D}_i = V \alpha_{ik} X_k ,
 \end{equation}
 ahol az $\alpha_{ik}$ együtthatók csak a test alakjától függenek. A $V \alpha_{ik}$ mennyiségek egy tenzort alkotnak, amelyet a test polarizációs tenzorának neveznek. Ez a tenzor szimmetrikus: $\alpha_{ik} = \alpha_{ki}$ (az állitást a 11. §-ban fogjuk bizonyítani). Ennek megfelelően, a (\ref{eq:21})-ben szereplő energia a következő alakot ölti:
-\begin{equation} \label{eq:23}
+\begin{equation} \label{eq:24}
     \mathcal{U} = -\frac{1}{2} V \alpha_{ik} X_i X_k .
 \end{equation}
 \end{document}
